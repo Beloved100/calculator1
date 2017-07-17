@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="calculator_ass.css" rel="stylesheet" type="text/css" />
+<script>
+function display()	
+{}
+
+function one()
+{
+	
+ document.getElementById('display').value+=1;
+
+}
+function two()
+{
+	
+ document.getElementById('display').value+=2;
+}
+function three()
+{
+	
+ document.getElementById('display').value+=3;
+}
+
+function four()
+{
+	
+ document.getElementById('display').value+=4;
+}
+
+function five()
+{
+	
+ document.getElementById('display').value+=5;
+}
+
+function six()
+{
+	
+ document.getElementById('display').value+=6;
+}
+
+function seven()
+{
+	
+ document.getElementById('display').value+=7;
+}
+
+function eight()
+{
+	
+ document.getElementById('display').value+=8;
+}
+function nine()
+{
+	
+ document.getElementById('display').value+=9;
+}
+function equal()
+{
+	
+ document.getElementById('display').value=eval(document.getElementById('display').value)
+}
+function zero()
+{
+	
+ document.getElementById('display').value+=0;
+}
+function minus()
+{
+	
+ document.getElementById('display').value+='-';
+}
+function add()
+{
+	
+ document.getElementById('display').value+='+';
+}
+function divide()
+{
+	
+ document.getElementById('display').value+='/';
+}
+function multiply()
+{
+	
+ document.getElementById('display').value+='*';
+}
+function point()
+{
+	
+ document.getElementById('display').value+='.';
+}
+function cancel()
+{
+	document.getElementById('display').value="";
+		if(document.getElementById("display").value==0){
+			
+		}
+
+}
+function del()
+{
+	var num=document.getElementById('display').value;
+	var del=num.substr(0,(num.length-1))
+	document.getElementById('display').value=del;
+	document.getElementById("display").value=0;
+}
+</script>
+</head>
+
+<body>
+<fieldset>
+  <legend>calculator</legend>
+  <table width="400" border="0">
+    <tr>
+      <td colspan="5" ><label for="textfield"></label>
+      <input type="text" name="textfield" id="display" size="100%"/></td>
+    </tr>
+    <tr>
+      <td><input type="button" name="1" id="one" value="1"  onclick="one()"></td>
+      <td><input type="button" name="2" id="two" value="2" onclick="two()"/></td>
+      <td><input type="submit" name="3" id="three" value="3" onclick="three()"/></td>
+      <td><input type="submit" name="+" id="add" value="+" onclick="add()"/></td>
+      <td rowspan="2"><input type="submit" id="delete" value="del" onclick="del()" /></td>
+    </tr>
+    <tr>
+      <td><input type="submit" name="4" id="four" value="4" onclick="four()"/></td>
+      <td><input type="submit" name="5" id="five" value="5" onclick="five()"/></td>
+      <td><input type="submit" name="6" id="six" value="6" onclick="six()"/></td>
+      <td><input type="submit" name="/" id="divide" value="/" onclick="divide()" /></td>
+    </tr>
+    <tr>
+      <td><input type="submit" name="7" id="seven" value="7" onclick="seven()"/></td>
+      <td><input type="submit" name="8" id="eight" value="8" onclick="eight()" /></td>
+      <td><input type="submit" name="9" id="nine" value="9" onclick="nine()"/></td>
+      <td><input type="submit" name="*" id="multiply" value="*" onclick="multiply"/></td>
+      <td rowspan="2"><input type="submit" name="cancel" id="cancel" value="C" onclick="cancel()" /></td>
+    </tr>
+    <tr>
+    <td><input type="submit" name="=" id="equal" value="=" onclick="equal()" /></td>
+    <td><input type="submit" name="0" id="zero" value="0" onclick="zero()" /></td>
+    <td><input type="submit" name="." id="point" value="." onclick="point()" /></td>
+    <td><input type="submit" name="-" id="minus" value="-" onclick="minus()" /></td>
+    </tr>
+  </table>
+</fieldset>
+</body>
+</html>
